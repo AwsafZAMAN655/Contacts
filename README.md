@@ -1,3 +1,1 @@
-"# FastContacts" 
-"# Contacts" 
 "# Contacts" 
