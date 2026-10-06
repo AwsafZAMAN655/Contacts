@@ -1,0 +1,8 @@
+<resources>
+    <color name="bg">#121212</color>
+    <color name="text_primary">#EDEDED</color>
+    <color name="text_secondary">#A0A0A0</color>
+    <color name="field_bg">#2A2C30</color>
+    <color name="accent">#8AB4F8</color>
+    <color name="on_accent">#0B1B33</color>
+</resources>
