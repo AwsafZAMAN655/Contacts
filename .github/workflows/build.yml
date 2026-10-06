@@ -24,23 +24,17 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Accept Android SDK Licenses
-        run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
-
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Generate Gradle Wrapper 8.9
-        run: gradle wrapper --gradle-version 8.9
+      - name: Generate Exact Wrapper for AGP 8.7.3
+        run: gradle wrapper --gradle-version 8.9 --distribution-type all
 
       - name: Make Gradlew Executable
         run: chmod +x gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: ./gradlew assembleDebug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
